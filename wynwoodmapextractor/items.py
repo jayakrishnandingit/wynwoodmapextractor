@@ -6,8 +6,10 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy.contrib.djangoitem import DjangoItem
+from artist.models import Artist
 
 
-class ArtistItem(scrapy.Item):
+class ArtistItem(DjangoItem):
     # define the fields for your item here like:
-    name = scrapy.Field()
+    django_model = Artist

@@ -7,6 +7,11 @@
 #
 #     http://doc.scrapy.org/en/latest/topics/settings.html
 #
+import os
+import sys
+sys.path.append('/wynwmeui')
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'wynwmeui.settings'
 
 BOT_NAME = 'wynwoodmapextractor'
 
